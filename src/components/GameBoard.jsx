@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react'; // Remova useEffect se não está usando
 import '../styles/GameBoard.css';
 import Dice from './Dice';
 import PlayerPiece from './PlayerPiece';
 import QuestionCard from './QuestionCard';
 import { boardCells } from '../data/boardData';
-import { questions } from '../data/questions';
+
 
 const GameBoard = () => {
   const [players, setPlayers] = useState([
