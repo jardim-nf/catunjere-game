@@ -1,0 +1,23 @@
+export const boardCells = [
+  { id: 0, type: 'start', label: 'INÍCIO' },
+  { id: 1, type: 'neutral', label: '' },
+  { id: 2, type: 'neutral', label: '' },
+  { id: 3, type: 'question', questionId: 3 },
+  { id: 4, type: 'neutral', label: '' },
+  { id: 5, type: 'neutral', label: '' },
+  { id: 6, type: 'question', questionId: 6 },
+  { id: 7, type: 'attention', message: "Conheço a história da minha família." },
+  { id: 8, type: 'move-back', steps: 2 },
+  { id: 9, type: 'move-forward', steps: 3 },
+  { id: 10, type: 'neutral', label: '' },
+  { id: 11, type: 'question', questionId: 11 },
+  { id: 12, type: 'neutral', label: '' },
+  { id: 13, type: 'neutral', label: '' },
+  { id: 14, type: 'neutral', label: '' },
+  { id: 15, type: 'question', questionId: 15 },
+  { id: 16, type: 'neutral', label: '' },
+  { id: 17, type: 'neutral', label: '' },
+  { id: 18, type: 'neutral', label: '' },
+  { id: 19, type: 'question', questionId: 19 },
+  { id: 20, type: 'finish', label: 'FIM' }
+];

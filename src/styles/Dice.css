@@ -1,0 +1,106 @@
+.dice-container {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.dice {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.dice-face {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 10px;
+  box-shadow: 
+    inset 0 0 10px rgba(0,0,0,0.1),
+    0 8px 20px rgba(0,0,0,0.2);
+  border: 3px solid #764ba2;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.dice.rolling .dice-face {
+  animation: roll 0.6s ease-out;
+}
+
+@keyframes roll {
+  0% { transform: rotateX(0) rotateY(0); }
+  25% { transform: rotateX(180deg) rotateY(90deg); }
+  50% { transform: rotateX(360deg) rotateY(180deg); }
+  75% { transform: rotateX(540deg) rotateY(270deg); }
+  100% { transform: rotateX(720deg) rotateY(360deg); }
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background: #764ba2;
+  border-radius: 50%;
+  justify-self: center;
+  align-self: center;
+}
+
+/* Posições dos pontos */
+.top-left { grid-column: 1; grid-row: 1; }
+.top-right { grid-column: 3; grid-row: 1; }
+.middle-left { grid-column: 1; grid-row: 2; }
+.center { grid-column: 2; grid-row: 2; }
+.middle-right { grid-column: 3; grid-row: 2; }
+.bottom-left { grid-column: 1; grid-row: 3; }
+.bottom-right { grid-column: 3; grid-row: 3; }
+
+.roll-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+  max-width: 200px;
+}
+
+.roll-button:hover:not(.disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
+}
+
+.roll-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.roll-button.rolling {
+  animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+.dice-value {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #764ba2;
+  background: #f0f0f0;
+  padding: 8px 15px;
+  border-radius: 20px;
+  display: inline-block;
+}
