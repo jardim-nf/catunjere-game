@@ -1,17 +1,18 @@
 import React from 'react';
+import './PlayerPiece.css';
 
 const PlayerPiece = ({ player, isCurrent }) => {
   return (
     <div 
-      className="player-piece"
-      style={{ 
-        backgroundColor: player.color,
-        border: isCurrent ? '3px solid #000' : '2px solid #fff',
-        transform: isCurrent ? 'scale(1.1)' : 'scale(1)'
-      }}
-      title={`${player.name} - Casa ${player.position}`}
+      className={`player-piece ${isCurrent ? 'current' : ''}`}
+      style={{ backgroundColor: player.color }}
+      title={`${player.name} - Casa ${player.position} | ${player.score} pontos`}
     >
-      <span className="player-id">{player.id}</span>
+      <div className="piece-content">
+        <span className="player-number">{player.id}</span>
+        {isCurrent && <div className="active-ring"></div>}
+      </div>
+      {isCurrent && <div className="glow-effect"></div>}
     </div>
   );
 };
