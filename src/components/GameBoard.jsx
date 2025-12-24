@@ -728,7 +728,7 @@ const GameBoard = () => {
 
       <div className="game-header">
         <div className="header-left">
-          <h1><span className="game-title-icon">🎮</span> <span className="game-title">CATUNJERÊ 2D</span></h1>
+          <h1><span className="game-title-icon">🎮</span> <span className="game-title">Cafungerê 2D</span></h1>
           <p className="game-subtitle">Uma jornada pela cultura afro-brasileira</p>
           <button onClick={handleActivateLibras} className="libras-btn">👋 Ativar Libras</button>
         </div>

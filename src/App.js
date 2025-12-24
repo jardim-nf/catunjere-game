@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>🎲 CATUNJERÊ - Jogo dos Afoxés 🎵</h1>
+        <h1>🎲 Cafungerê - Jogo dos Afoxés 🎵</h1>
         <div className="header-controls">
           <button 
             className="rules-btn" 
@@ -22,7 +22,7 @@ function App() {
       <main>
         {showRules ? (
           <div className="rules-container">
-            <h2>📖 Regras do Jogo Catunjerê</h2>
+            <h2>📖 Regras do Jogo Cafungerê</h2>
             
             <div className="rules-content">
               <section className="rule-section">
